@@ -37,7 +37,7 @@ export default function Postes() {
                             addPost({ id: state.length + 1, title, desc })
                         );
                         const input = document.querySelectorAll("input");
-                        // input.forEach((el) => (el.value = ""));
+                        input.forEach((el) => (el.value = ""));
                     }}
                 >
                     Add Post
