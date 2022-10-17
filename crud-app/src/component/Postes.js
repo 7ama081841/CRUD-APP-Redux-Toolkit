@@ -6,10 +6,9 @@ import { useSelector } from "react-redux";
 export default function Postes() {
     const [title, setTitle] = useState("");
     const [desc, setdesc] = useState("");
-    
+
     const [updateTitle, setUpdateTitle] = useState("");
     const [updateDesc, setUpdateDesc] = useState("");
-
 
     const [isUpdate, setIsUpdate] = useState(false);
     const [id, setId] = useState(null);
@@ -33,10 +32,10 @@ export default function Postes() {
                 />
                 <button
                     onClick={() => {
+                        const input = document.querySelectorAll("input");
                         dispatch(
                             addPost({ id: state.length + 1, title, desc })
                         );
-                        const input = document.querySelectorAll("input");
                         input.forEach((el) => (el.value = ""));
                     }}
                 >
